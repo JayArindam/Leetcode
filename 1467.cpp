@@ -11,7 +11,6 @@ class Solution {
  private:
   const vector<int> fact{1, 1, 2, 6, 24, 120, 720};
 
-  // Assume we have two boxes A and B
   double cases(const vector<int>& balls, int i, int ballsCountA,
                int ballsCountB, int colorsCountA, int colorsCountB, int n,
                BoxCase boxCase) {
@@ -22,7 +21,6 @@ class Solution {
 
     double ans = 0;
 
-    // Balls taken from A for `balls[i]`
     for (int ballsTakenA = 0; ballsTakenA <= balls[i]; ++ballsTakenA) {
       const int ballsTakenB = balls[i] - ballsTakenA;
       const int newcolorsCountA = colorsCountA + (ballsTakenA > 0);
